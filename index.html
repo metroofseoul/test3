@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> The Metro-of Archive</title>
+  <meta charset="utf-8">
+  <link href="main.css" rel="stylesheet">
+  <link href="stylesheet.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+  <script src="fetch/fetch.js"></script>
+</head>
+
+<body>
+  <h1><a href="index.html">The Metro-of Archive 2020<br></a>
+    <p id="font3"> '91 서울지하철 <br> 디자인주제 아카이브</p>
+  </h1>
+
+  <br><br>
+  <div id="grid">
+    <div>
+      <b>
+        <p> 목록
+
+        <p id="nav"></p>
+        <p><br>about<br> contact<br>
+      </b>
+    </div>
+
+    <div id="art">
+      <article>
+      </article>
+
+      <script>
+        function fetchPage(name) {
+          fetch(name).then(function(response) {
+            response.text().then(function(text) {
+              document.querySelector('article').innerHTML = text;
+            })
+          });
+        }
+        if (location.hash) {
+          fetchPage(location.hash.substr(2));
+        } else {
+          fetchPage('About');
+        }
+        fetch('list3').then(function(response) {
+          response.text().then(function(text) {
+            var items = text.split(',');
+            var i = 0;
+            var tags = '';
+            while (i < items.length) {
+              var item = items[i];
+              item = item.trim();
+              var tag = '<br><a href="#!' + item + '" onclick="fetchPage(\'' + item + '\')">' + item + '</a></li>';
+              tags = tags + tag;
+              i = i + 1;
+            }
+            document.querySelector('#nav').innerHTML = tags;
+          })
+        });
+      </script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+body{
+  margin:10px;
+  color:black;
+}
+
+div{
+  font-family: 'helvetica';
+  color:black;
+}
+
+p{
+  font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+h1 {
+  color: black;
+  font-family: 'helvetica';
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 5px solid black;
+}
+
+h2 {
+  font-family: 'untitledTTF';
+  font-size: 2rem;
+  font-weight: bold;
+    text-align: left;
+  line-height: 1;
+}
+
+h3 {
+  font-family: 'untitledTTF';
+  font-size: 1rem;
+  font-weight: bold;
+    text-align: left;
+  line-height: 1;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  border: 5px;
+  padding-left: 30px;
+    line-height: 1;
+}
+
+#grid b{
+  display: grid;
+  grid-template-columns: 1fr;
+  text-decoration-color: black;
+  font-size: 0.8rem;
+  border: 5px;
+  line-height: 2;
+}
+
+
+
+
+#grid art {
+
+  font-size: 1rem;
+  margin-right: 100px;
+  padding-left: 20px;
+  padding-right: 300px;
+
+}
+
+
+#div nav {
+    font-family: 'helvetica';
+}
+
+#font1 {
+  font-family: 'untitledTTF';
+  font-size: 10px;
+}
+
+#font2  {
+  font-family: 'untitledTTF';
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#font3 {
+  font-family: 'untitledTTF';
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1;
+
+}
+
+image {
+  max-width: 100px;
+  height: auto;
+}
